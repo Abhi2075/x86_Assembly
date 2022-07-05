@@ -1,0 +1,9 @@
+/usr/lib/gcc/i686-linux-gnu/5/cc1
+
+/usr/lib/gcc/i686-linux-gnu/5/cc1 -o "Using cc1 Print_Addition_Of_Two_Numbers.s" Print_Addition_Of_Two_Numbers.c
+
+as -o "Using as Print_Addition_Of_Two_Numbers.o" Using\ cc1\ Print_Addition_Of_Two_Numbers.s 
+
+ld -o "Using ld Print_Addition_Of_Two_Numbers" -lc -dynamic-linker /lib/ld-linux.so.2 "Using as Print_Addition_Of_Two_Numbers.o" -e main
+
+./"Using ld Print_Addition_Of_Two_Numbers"

@@ -1,0 +1,26 @@
+The result of two 32 bit integers can easily go byond 2^32 so that we can not
+store the multiplication result in 32 bit register as we do in add and sub 
+instruction
+
+Q -> so how can we use mul instruction
+
+A-> mul instruction takes only one oprand
+
+mul reg-operand
+
+Let's say we are multiplying 4 byte numbers.
+
+mull %reg-32    #eax,ebx,ecx,esi,edi
+
+mull %ebx       #ebx * ?
+
+Here mull instruction use invisible operand eax
+In Technical language these invisible operand is called as implicit operand
+
+eax * reg-32 result is given in two registers. Why?
+Because result is potentially 64 bit long.
+
+Lower 32 bits of the result are placed in eax
+Upper 32 bits of the result are placed in edx
+
+

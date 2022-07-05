@@ -1,0 +1,12 @@
+
+//For Assemble the code use following command
+as -o "Summation_Of_Array.o" Summation_Of_Array.s 
+
+
+//For link the code use following code
+ld -o "Summation_Of_Array" -lc -dynamic-linker /lib/ld-linux.so.2 "Summation_Of_Array.o" -e main
+
+//For Run use following command
+./Summation_Of_Array
+
+

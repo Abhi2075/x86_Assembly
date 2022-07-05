@@ -1,0 +1,29 @@
+For 32 Bit Linux
+
+cpp < C file > < Output Pre processed file >
+
+/usr/lib/gcc/i686-linux-gnu/5/cc1
+
+/usr/lib/gcc/i686-linux-gnu/5/cc1 -o <name of Assembly file> < Name of C file >
+
+as -o < Name of obj file > <name of Assembly file>
+
+ld -o < Name of executiable file > -lc -dynamic-linker /lib/ld-linux.so.2 < Name of Obj file > -e < Entry point function i.e. main>
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+For 64 Bit Linux
+
+cpp < C File > >> < Output C File >
+
+Compiler Location
+-----------------
+/usr/lib/gcc/x86_64-linux-gnu/9/cc1
+
+Linker share  object location
+-----------------------------
+/usr/lib64/ld-linux-86-x64.so.2
+
